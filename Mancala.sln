@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mancala", "Mancala\Mancala.csproj", "{22588EA1-1360-418B-9E2B-E407A55D0BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22588EA1-1360-418B-9E2B-E407A55D0BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22588EA1-1360-418B-9E2B-E407A55D0BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22588EA1-1360-418B-9E2B-E407A55D0BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22588EA1-1360-418B-9E2B-E407A55D0BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54A016C6-D3E6-4B33-AEE5-08B69C1C154E}
+	EndGlobalSection
+EndGlobal
