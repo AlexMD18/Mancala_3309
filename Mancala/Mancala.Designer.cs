@@ -83,7 +83,6 @@
             this.txtPlayerOneName.Name = "txtPlayerOneName";
             this.txtPlayerOneName.Size = new System.Drawing.Size(219, 37);
             this.txtPlayerOneName.TabIndex = 2;
-            //this.txtPlayerOneName.TextChanged += new System.EventHandler(this.txtPlayerOneName_TextChanged);
             // 
             // lblPlayerTwoName
             // 
@@ -148,7 +147,6 @@
             this.txtBoardPlayer1Name.Size = new System.Drawing.Size(148, 35);
             this.txtBoardPlayer1Name.TabIndex = 9;
             this.txtBoardPlayer1Name.Visible = false;
-            //this.txtBoardPlayer1Name.TextChanged += new System.EventHandler(this.txtBoardPlayer1Name_TextChanged);
             // 
             // pnlBoard
             // 
@@ -173,6 +171,7 @@
             this.pnlBoard.Size = new System.Drawing.Size(1198, 388);
             this.pnlBoard.TabIndex = 5;
             this.pnlBoard.Visible = false;
+            //this.pnlBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBoard_Paint);
             // 
             // btnStorePocket2
             // 
@@ -370,7 +369,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Name = "Mancala";
             this.Text = "Mancala";
-            //this.Load += new System.EventHandler(this.Mancala_Load_1);
+            this.Load += new System.EventHandler(this.Mancala_Load);
             this.pnlBoard.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
