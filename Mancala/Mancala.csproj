@@ -92,5 +92,8 @@
   <ItemGroup>
     <None Include="Resources\StorePocket.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="gitignore.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

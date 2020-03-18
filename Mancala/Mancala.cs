@@ -23,7 +23,7 @@ namespace Mancala
     {
         //Private Variables
         private Button[] pocketButtons = new Button[14];
-
+        
 
         public Mancala()
         {
@@ -69,20 +69,25 @@ namespace Mancala
         //Sets all the buttons on the board to indexes in the array.
         private void Mancala_Load(object sender, EventArgs e)
         {
-            pocketButtons[0] = btnPocket1;
-            pocketButtons[1] = btnPocket2;
-            pocketButtons[2] = btnPocket3;
-            pocketButtons[3] = btnPocket4;
-            pocketButtons[4] = btnPocket5;
-            pocketButtons[5] = btnPocket6;
-            pocketButtons[6] = btnStorePocket1;
-            pocketButtons[7] = btnPocket7;
-            pocketButtons[8] = btnPocket8;
-            pocketButtons[9] = btnPocket9;
-            pocketButtons[10] = btnPocket10;
-            pocketButtons[11] = btnPocket11;
-            pocketButtons[12] = btnPocket12;
-            pocketButtons[13] = btnStorePocket2;
+            pocketButtons[0] = btnPocket13;
+            pocketButtons[1] = btnPocket12;
+            pocketButtons[2] = btnPocket11;
+            pocketButtons[3] = btnPocket10;
+            pocketButtons[4] = btnPocket9;
+            pocketButtons[5] = btnPocket8;
+            pocketButtons[6] = btnStorePocket14;
+            pocketButtons[7] = btnPocket6;
+            pocketButtons[8] = btnPocket5;
+            pocketButtons[9] = btnPocket4;
+            pocketButtons[10] = btnPocket3;
+            pocketButtons[11] = btnPocket2;
+            pocketButtons[12] = btnPocket1;
+            pocketButtons[13] = btnStorePocket7;
+        }
+
+        private void btnPocket1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
