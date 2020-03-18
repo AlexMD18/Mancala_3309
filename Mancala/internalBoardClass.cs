@@ -64,7 +64,7 @@ namespace Mancala
 
         public bool gameOver()
         {
-            return true;
+            return false;
         }
     }
 }
