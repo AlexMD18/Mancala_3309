@@ -171,7 +171,6 @@
             this.pnlBoard.Size = new System.Drawing.Size(1198, 388);
             this.pnlBoard.TabIndex = 5;
             this.pnlBoard.Visible = false;
-            //this.pnlBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBoard_Paint);
             // 
             // btnStorePocket2
             // 
