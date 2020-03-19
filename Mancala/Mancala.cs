@@ -23,7 +23,8 @@ namespace Mancala
     {
         //Private Variables
         private Button[] pocketButtons = new Button[14];
-        
+        private int[] pocketValues = new int[14];
+        private int position;
 
         public Mancala()
         {
@@ -69,25 +70,239 @@ namespace Mancala
         //Sets all the buttons on the board to indexes in the array.
         private void Mancala_Load(object sender, EventArgs e)
         {
-            pocketButtons[0] = btnPocket13;
-            pocketButtons[1] = btnPocket12;
-            pocketButtons[2] = btnPocket11;
-            pocketButtons[3] = btnPocket10;
-            pocketButtons[4] = btnPocket9;
-            pocketButtons[5] = btnPocket8;
-            pocketButtons[6] = btnStorePocket14;
-            pocketButtons[7] = btnPocket6;
-            pocketButtons[8] = btnPocket5;
-            pocketButtons[9] = btnPocket4;
-            pocketButtons[10] = btnPocket3;
-            pocketButtons[11] = btnPocket2;
-            pocketButtons[12] = btnPocket1;
-            pocketButtons[13] = btnStorePocket7;
+            pocketButtons[0] = btnPocket1;
+            pocketButtons[1] = btnPocket2;
+            pocketButtons[2] = btnPocket3;
+            pocketButtons[3] = btnPocket4;
+            pocketButtons[4] = btnPocket5;
+            pocketButtons[5] = btnPocket6;
+            pocketButtons[6] = btnStorePocket7;
+            pocketButtons[7] = btnPocket8;
+            pocketButtons[8] = btnPocket9;
+            pocketButtons[9] = btnPocket10;
+            pocketButtons[10] = btnPocket11;
+            pocketButtons[11] = btnPocket12;
+            pocketButtons[12] = btnPocket13;
+            pocketButtons[13] = btnStorePocket14;
+            btnStorePocket14.Enabled = false;
+            btnStorePocket7.Enabled = false;
+            p1turn();
+
+            position = 0;
+            while (position < 14)
+            {
+                pocketButtons[position].Text = "4";
+                pocketValues[position] = 4;
+                position++;
+            }
+            //InternalBoardClass currentboard = new InternalBoardClass();
+
+        }
+        public bool move(int position)
+        {
+            if (pocketValues[position] == 0)
+            {
+                return false;
+            }
+            int value = pocketValues[position];
+            pocketValues[position] = 0;
+            while (value > 0)
+            {
+                if(value == 1 && position == 5)
+                {
+                    position = position + 1;
+                    pocketValues[position] += 1;
+                    value--;
+                    return true;
+                }
+                if (value == 1 && position == 12)
+                {
+                    position = position + 1;
+                    pocketValues[position] += 1;
+                    value--;
+                    return true;
+                }
+                if (position == 13)
+                {
+                    value--;
+                    pocketValues[position] += 1;
+                    position = 1;
+                }
+                else
+                {
+                    position = position + 1;
+                    pocketValues[position] += 1;
+                    value--;
+                }
+            }
+            if(value == 0)
+            {
+                MessageBox.Show("you dingus");
+            }
+            return false;
+        }
+
+        public void displaymove()
+        {
+            position = 0;
+            while (position < 14)
+            {
+                pocketButtons[position].Text = Convert.ToString(pocketValues[position]);
+                position++;
+            }
+        }
+
+        public void p1turn()
+        {
+            btnPocket8.Enabled = false;
+            btnPocket9.Enabled = false;
+            btnPocket10.Enabled = false;
+            btnPocket11.Enabled = false;
+            btnPocket12.Enabled = false;
+            btnPocket13.Enabled = false;
+
+            btnPocket1.Enabled = true;
+            btnPocket2.Enabled = true;
+            btnPocket3.Enabled = true;
+            btnPocket4.Enabled = true;
+            btnPocket5.Enabled = true;
+            btnPocket6.Enabled = true;
+        }
+        public void p2turn()
+        {
+            btnPocket8.Enabled = true;
+            btnPocket9.Enabled = true;
+            btnPocket10.Enabled = true;
+            btnPocket11.Enabled = true;
+            btnPocket12.Enabled = true;
+            btnPocket13.Enabled = true;
+
+            btnPocket1.Enabled = false;
+            btnPocket2.Enabled = false;
+            btnPocket3.Enabled = false;
+            btnPocket4.Enabled = false;
+            btnPocket5.Enabled = false;
+            btnPocket6.Enabled = false;
         }
 
         private void btnPocket1_Click(object sender, EventArgs e)
         {
-            
+            bool goagain = move(0);
+            if(goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket2_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(1);
+            if (goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket3_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(2);
+            if (goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket4_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(3);
+            if (goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket5_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(4);
+            if (goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket6_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(5);
+            if (goagain != true)
+            {
+                p2turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket8_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(7);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket9_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(8);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket10_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(9);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket11_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(10);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket12_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(11);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
+        }
+
+        private void btnPocket13_Click(object sender, EventArgs e)
+        {
+            bool goagain = move(12);
+            if (goagain != true)
+            {
+                p1turn();
+            }
+            displaymove();
         }
     }
 }

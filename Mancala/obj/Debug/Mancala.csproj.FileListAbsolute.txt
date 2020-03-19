@@ -8,3 +8,13 @@ C:\Users\seanf\source\repos\AlexMD18\Mancala_3309\Mancala\obj\Debug\Mancala.cspr
 C:\Users\seanf\source\repos\AlexMD18\Mancala_3309\Mancala\obj\Debug\Mancala.csproj.CoreCompileInputs.cache
 C:\Users\seanf\source\repos\AlexMD18\Mancala_3309\Mancala\obj\Debug\Mancala.exe
 C:\Users\seanf\source\repos\AlexMD18\Mancala_3309\Mancala\obj\Debug\Mancala.pdb
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\bin\Debug\Mancala.exe.config
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\bin\Debug\Mancala.exe
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\bin\Debug\Mancala.pdb
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.csprojAssemblyReference.cache
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.Mancala.resources
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.Properties.Resources.resources
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.csproj.GenerateResource.cache
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.csproj.CoreCompileInputs.cache
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.exe
+C:\Users\seanf\Source\Repos\Mancala_33092\Mancala\obj\Debug\Mancala.pdb

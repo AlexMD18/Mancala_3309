@@ -142,7 +142,7 @@
             this.txtBoardPlayer1Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoardPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoardPlayer1Name.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBoardPlayer1Name.Location = new System.Drawing.Point(12, 266);
+            this.txtBoardPlayer1Name.Location = new System.Drawing.Point(1039, 259);
             this.txtBoardPlayer1Name.Name = "txtBoardPlayer1Name";
             this.txtBoardPlayer1Name.Size = new System.Drawing.Size(148, 31);
             this.txtBoardPlayer1Name.TabIndex = 9;
@@ -214,6 +214,7 @@
             this.btnPocket2.Size = new System.Drawing.Size(132, 133);
             this.btnPocket2.TabIndex = 10;
             this.btnPocket2.UseVisualStyleBackColor = false;
+            this.btnPocket2.Click += new System.EventHandler(this.btnPocket2_Click);
             // 
             // btnPocket3
             // 
@@ -226,6 +227,7 @@
             this.btnPocket3.Size = new System.Drawing.Size(132, 133);
             this.btnPocket3.TabIndex = 9;
             this.btnPocket3.UseVisualStyleBackColor = false;
+            this.btnPocket3.Click += new System.EventHandler(this.btnPocket3_Click);
             // 
             // btnPocket4
             // 
@@ -238,6 +240,7 @@
             this.btnPocket4.Size = new System.Drawing.Size(132, 133);
             this.btnPocket4.TabIndex = 8;
             this.btnPocket4.UseVisualStyleBackColor = false;
+            this.btnPocket4.Click += new System.EventHandler(this.btnPocket4_Click);
             // 
             // btnPocket5
             // 
@@ -250,6 +253,7 @@
             this.btnPocket5.Size = new System.Drawing.Size(132, 133);
             this.btnPocket5.TabIndex = 7;
             this.btnPocket5.UseVisualStyleBackColor = false;
+            this.btnPocket5.Click += new System.EventHandler(this.btnPocket5_Click);
             // 
             // btnPocket6
             // 
@@ -262,6 +266,7 @@
             this.btnPocket6.Size = new System.Drawing.Size(132, 133);
             this.btnPocket6.TabIndex = 6;
             this.btnPocket6.UseVisualStyleBackColor = false;
+            this.btnPocket6.Click += new System.EventHandler(this.btnPocket6_Click);
             // 
             // btnPocket8
             // 
@@ -274,6 +279,7 @@
             this.btnPocket8.Size = new System.Drawing.Size(132, 133);
             this.btnPocket8.TabIndex = 5;
             this.btnPocket8.UseVisualStyleBackColor = false;
+            this.btnPocket8.Click += new System.EventHandler(this.btnPocket8_Click);
             // 
             // btnPocket9
             // 
@@ -286,6 +292,7 @@
             this.btnPocket9.Size = new System.Drawing.Size(132, 133);
             this.btnPocket9.TabIndex = 4;
             this.btnPocket9.UseVisualStyleBackColor = false;
+            this.btnPocket9.Click += new System.EventHandler(this.btnPocket9_Click);
             // 
             // btnPocket10
             // 
@@ -298,6 +305,7 @@
             this.btnPocket10.Size = new System.Drawing.Size(132, 133);
             this.btnPocket10.TabIndex = 3;
             this.btnPocket10.UseVisualStyleBackColor = false;
+            this.btnPocket10.Click += new System.EventHandler(this.btnPocket10_Click);
             // 
             // btnPocket11
             // 
@@ -310,6 +318,7 @@
             this.btnPocket11.Size = new System.Drawing.Size(132, 133);
             this.btnPocket11.TabIndex = 2;
             this.btnPocket11.UseVisualStyleBackColor = false;
+            this.btnPocket11.Click += new System.EventHandler(this.btnPocket11_Click);
             // 
             // btnPocket12
             // 
@@ -322,6 +331,7 @@
             this.btnPocket12.Size = new System.Drawing.Size(132, 133);
             this.btnPocket12.TabIndex = 1;
             this.btnPocket12.UseVisualStyleBackColor = false;
+            this.btnPocket12.Click += new System.EventHandler(this.btnPocket12_Click);
             // 
             // btnPocket13
             // 
@@ -334,6 +344,7 @@
             this.btnPocket13.Size = new System.Drawing.Size(132, 133);
             this.btnPocket13.TabIndex = 0;
             this.btnPocket13.UseVisualStyleBackColor = false;
+            this.btnPocket13.Click += new System.EventHandler(this.btnPocket13_Click);
             // 
             // txtBoardPlayer2Name
             // 
@@ -341,7 +352,7 @@
             this.txtBoardPlayer2Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoardPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoardPlayer2Name.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBoardPlayer2Name.Location = new System.Drawing.Point(1062, 266);
+            this.txtBoardPlayer2Name.Location = new System.Drawing.Point(12, 258);
             this.txtBoardPlayer2Name.Name = "txtBoardPlayer2Name";
             this.txtBoardPlayer2Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBoardPlayer2Name.Size = new System.Drawing.Size(148, 31);

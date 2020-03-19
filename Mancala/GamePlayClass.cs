@@ -18,6 +18,7 @@ namespace Mancala
         private bool player1Turn;
         private bool player2Turn;
         private bool playerTurn;
+        
 
         public GamePlayClass()
         {
