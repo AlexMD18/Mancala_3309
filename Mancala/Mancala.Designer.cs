@@ -142,7 +142,7 @@
             this.txtBoardPlayer1Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoardPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoardPlayer1Name.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBoardPlayer1Name.Location = new System.Drawing.Point(1039, 259);
+            this.txtBoardPlayer1Name.Location = new System.Drawing.Point(1062, 710);
             this.txtBoardPlayer1Name.Name = "txtBoardPlayer1Name";
             this.txtBoardPlayer1Name.Size = new System.Drawing.Size(148, 31);
             this.txtBoardPlayer1Name.TabIndex = 9;
@@ -352,7 +352,7 @@
             this.txtBoardPlayer2Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoardPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoardPlayer2Name.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtBoardPlayer2Name.Location = new System.Drawing.Point(12, 258);
+            this.txtBoardPlayer2Name.Location = new System.Drawing.Point(12, 259);
             this.txtBoardPlayer2Name.Name = "txtBoardPlayer2Name";
             this.txtBoardPlayer2Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBoardPlayer2Name.Size = new System.Drawing.Size(148, 31);

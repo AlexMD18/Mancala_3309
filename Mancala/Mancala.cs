@@ -95,6 +95,10 @@ namespace Mancala
                 pocketValues[position] = 4;
                 position++;
             }
+            pocketValues[6] = 0;
+            pocketValues[13] = 0;
+            pocketButtons[6].Text = "0";
+            pocketButtons[13].Text = "0";
             //InternalBoardClass currentboard = new InternalBoardClass();
 
         }
@@ -102,31 +106,59 @@ namespace Mancala
         {
             if (pocketValues[position] == 0)
             {
-                return false;
+                if (position > 0 && position < 6)
+                {
+                    if (pocketValues[0] + pocketValues[1] + pocketValues[2] + pocketValues[3] + pocketValues[4] + pocketValues[5] == 0)
+                    {
+                        return false;
+                    }
+                }
+                if(position > 6 && position < 13)
+                { 
+                    if(pocketValues[7] + pocketValues[8] + pocketValues[9] + pocketValues[10] + pocketValues[11] + pocketValues[12] == 0)
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pocket is Empty!");
+                    return true;
+                }
+                
             }
             int value = pocketValues[position];
             pocketValues[position] = 0;
+            bool pass = false;
             while (value > 0)
             {
-                if(value == 1 && position == 5)
+                if(value == 1 && position == 5 && pass == false)
                 {
                     position = position + 1;
                     pocketValues[position] += 1;
                     value--;
                     return true;
                 }
-                if (value == 1 && position == 12)
+                if (value == 1 && position == 12 && pass == false)
                 {
                     position = position + 1;
                     pocketValues[position] += 1;
                     value--;
                     return true;
                 }
-                if (position == 13)
+                else if (position == 13)
                 {
-                    value--;
+                    position = 0;
                     pocketValues[position] += 1;
-                    position = 1;
+                    value--;
+                    pass = true;
+                }
+                else if (position == 6)
+                {
+                    position = position + 1;
+                    pocketValues[position] += 1;
+                    value--;
+                    pass = true;
                 }
                 else
                 {
@@ -135,10 +167,7 @@ namespace Mancala
                     value--;
                 }
             }
-            if(value == 0)
-            {
-                MessageBox.Show("you dingus");
-            }
+            
             return false;
         }
 
@@ -185,6 +214,24 @@ namespace Mancala
             btnPocket6.Enabled = false;
         }
 
+        public bool checkWin()
+        {
+            if (pocketValues[6] + pocketValues[13] == 48)
+            {
+                if (pocketValues[6] > pocketValues[13]) {
+                    MessageBox.Show(txtBoardPlayer1Name.Text + " Wins!");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show(txtBoardPlayer2Name.Text + " Wins!");
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         private void btnPocket1_Click(object sender, EventArgs e)
         {
             bool goagain = move(0);
@@ -193,6 +240,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket2_Click(object sender, EventArgs e)
@@ -203,6 +251,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket3_Click(object sender, EventArgs e)
@@ -213,6 +262,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket4_Click(object sender, EventArgs e)
@@ -223,6 +273,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket5_Click(object sender, EventArgs e)
@@ -233,6 +284,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket6_Click(object sender, EventArgs e)
@@ -243,6 +295,7 @@ namespace Mancala
                 p2turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket8_Click(object sender, EventArgs e)
@@ -253,6 +306,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket9_Click(object sender, EventArgs e)
@@ -263,6 +317,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket10_Click(object sender, EventArgs e)
@@ -273,6 +328,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket11_Click(object sender, EventArgs e)
@@ -283,6 +339,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket12_Click(object sender, EventArgs e)
@@ -293,6 +350,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
 
         private void btnPocket13_Click(object sender, EventArgs e)
@@ -303,6 +361,7 @@ namespace Mancala
                 p1turn();
             }
             displaymove();
+            checkWin();
         }
     }
 }
