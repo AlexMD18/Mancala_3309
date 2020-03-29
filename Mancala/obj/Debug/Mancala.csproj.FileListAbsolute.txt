@@ -8,3 +8,8 @@ C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Mancala.csproj.GenerateRes
 C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Mancala.csproj.CoreCompileInputs.cache
 C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Mancala.exe
 C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Mancala.pdb
+C:\Users\AlexM\source\repos\Mancala\Mancala\bin\Debug\Interop.WMPLib.dll
+C:\Users\AlexM\source\repos\Mancala\Mancala\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Interop.WMPLib.dll
+C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\AlexM\source\repos\Mancala\Mancala\obj\Debug\Mancala.csproj.ResolveComReference.cache

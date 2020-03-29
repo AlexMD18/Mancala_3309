@@ -19,6 +19,7 @@ namespace Mancala
         private bool player2Turn;
         private bool playerTurn;
 
+
         public GamePlayClass()
         {
             player1Turn = true;
@@ -32,7 +33,7 @@ namespace Mancala
 
         public void printWinner()
         {
-            
+
         }
     }
 }
