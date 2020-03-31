@@ -24,14 +24,13 @@ namespace Mancala
     {
         WindowsMediaPlayer playlistPlayer = new WindowsMediaPlayer();
 
-
         //Private Variables
         private Button[] pocketButtons = new Button[14];
         private int[] pocketValues = new int[14];
         private int position;
         InternalBoardClass currentBoard = new InternalBoardClass();
 
-
+        //Initalizesthe board components and begins playing the music in the background
         public Mancala()
         {
             InitializeComponent();
@@ -42,6 +41,7 @@ namespace Mancala
             //player.URL = "Dragonborn.mp3";
         }
 
+        //When the player presses the play button, this will make the board visable and show the directions to the game.
         private void btnPlay_Click(object sender, EventArgs e)
         {
             if (txtPlayerOneName.Text == "" || txtPlayerTwoName.Text == "")
@@ -80,13 +80,16 @@ namespace Mancala
         //Closes the game
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         //Sets all the buttons on the board to indexes in the array.
         private void Mancala_Load(object sender, EventArgs e)
         {
-
             playlistPlayer.controls.play();
 
             pocketButtons[0] = btnPocket1;
@@ -120,11 +123,14 @@ namespace Mancala
             //InternalBoardClass currentboard = new InternalBoardClass();
 
         }
+
+        //Calls the move method in the internal board class
         public bool move(int position)
         {
             return currentBoard.move(position);
         }
 
+        //Displays the number on each button
         public void displaymove()
         {
             position = 0;
@@ -135,6 +141,7 @@ namespace Mancala
             }
         }
 
+        //Controls what happens when it is player 1's turn.
         public void p1turn()
         {
             btnPocket8.Enabled = false;
@@ -151,6 +158,8 @@ namespace Mancala
             btnPocket5.Enabled = true;
             btnPocket6.Enabled = true;
         }
+
+        //Controls what happens when it is player 2's turn
         public void p2turn()
         {
             btnPocket8.Enabled = true;
@@ -168,6 +177,7 @@ namespace Mancala
             btnPocket6.Enabled = false;
         }
 
+        //checks to see if the sum of the two store pockets on the sides adds up to 48
         public bool checkWin()
         {
            if (currentBoard.getvalue(6) + currentBoard.getvalue(13) == 48)
@@ -186,7 +196,7 @@ namespace Mancala
             return false;
         }
 
-
+        //Sets the properties of each of the buttons on the panel- Begin
         private void btnPocket1_Click(object sender, EventArgs e)
         {
             bool goagain = move(0);
@@ -317,8 +327,9 @@ namespace Mancala
             }
             displaymove();
             checkWin();
-        }
+        }//End
 
+        //Music controls, allows user to stop and play music
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPlayPause.Checked)

@@ -2,7 +2,8 @@
 Team: Alex Drogo & Sean Fuller
 Due-Date: 04/02/2020
 CIS 3309-001
-Internal Board Class - 
+Internal Board Class - Holds arrays to represent pockets, methods for moving pieces when selected, Board initialization, 
+and the update of the board when the players move.
 */
 
 using System;
@@ -26,6 +27,7 @@ namespace Mancala
 
         }
 
+        //Attaches the array to the board
         public bool createBoard()
         {
             position = 0;
@@ -39,6 +41,7 @@ namespace Mancala
             return true;
         }
 
+        //moves the "pieces" on the board when the user presses on a button.
         public bool move(int position)
         {
             if (pocketValues[position] == 0)
@@ -108,15 +111,11 @@ namespace Mancala
             return false;
         }
 
+        //Returns the number of pieces in each pocket 
         public int getvalue(int position)
         {
             int value = pocketValues[position];
             return value;
-        }
-
-        public bool gameOver()
-        {
-            return false;
         }
     }
 }
