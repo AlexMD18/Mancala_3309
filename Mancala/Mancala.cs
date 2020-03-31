@@ -29,6 +29,8 @@ namespace Mancala
         private int[] pocketValues = new int[14];
         private int position;
         InternalBoardClass currentBoard = new InternalBoardClass();
+        PlayerClass Player1;
+        PlayerClass Player2;
 
         //Initalizesthe board components and begins playing the music in the background
         public Mancala()
@@ -55,6 +57,8 @@ namespace Mancala
                 txtBoardPlayer2Name.Visible = true;
                 txtBoardPlayer1Name.Text = txtPlayerOneName.Text;
                 txtBoardPlayer2Name.Text = txtPlayerTwoName.Text;
+                Player1 = new PlayerClass(txtPlayerOneName.Text);
+                Player2 = new PlayerClass(txtPlayerTwoName.Text);
                 MessageBox.Show("Directions: \n\n" +
                                 "Set Up: The Mancala board is made up of two rows of six pockets(also called “holes,” or “pits”) each. " +
                                 "Four pieces are placed in each of the 12 pockets initally." +
@@ -184,12 +188,12 @@ namespace Mancala
            {
                 if (currentBoard.getvalue(6) > currentBoard.getvalue(13))
                 {
-                   MessageBox.Show(txtBoardPlayer1Name.Text + " Wins!");
+                   MessageBox.Show(Player1.getName() + " Wins!");
                    return true;
                 }
                 else
                 {
-                    MessageBox.Show(txtBoardPlayer2Name.Text + " Wins!");
+                    MessageBox.Show(Player2.getName() + " Wins!");
                     return true;
                 }
             }

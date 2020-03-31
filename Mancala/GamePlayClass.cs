@@ -52,12 +52,12 @@ namespace Mancala
             {
                 if (currentBoard.getvalue(6) > currentBoard.getvalue(13))
                 {
-                    MessageBox.Show(player.getPlayerOneName + " Wins!");
+                    MessageBox.Show(player.getName() + " Wins!");
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show(player.getPlayerTwoName + " Wins!");
+                    MessageBox.Show(player.getName() + " Wins!");
                     return true;
                 }
             }

@@ -17,8 +17,7 @@ namespace Mancala
     class PlayerClass
     {
         //Private variables for player names
-        private string playerOneName;
-        private string playerTwoName;
+        private string Name;
 
         //Parameterless Constructor
         public PlayerClass()
@@ -27,27 +26,15 @@ namespace Mancala
         }
 
         //Parameterized Constructor
-        public PlayerClass(string playerOneName, string playerTwoName)
+        public PlayerClass(string playerName)
         {
-            this.playerOneName = playerOneName;
-            this.playerTwoName = playerTwoName;
+            this.Name = playerName;
         }
 
         //Start of getter methods
-        public string getPlayerOneName
+        public string getName()
         {
-            get
-            {
-                return (playerOneName);
-            }
+            return Name;
         }
-
-        public string getPlayerTwoName
-        {
-            get
-            {
-                return (playerTwoName);
-            }
-        }//end getters
     }
 }
